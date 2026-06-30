@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="LUNA GELATO emblem">
+  <!-- outer ring -->
+  <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.6"/>
+  <!-- crescent moon -->
+  <path d="M58 28 a24 24 0 1 0 0 44 a18.5 18.5 0 1 1 0 -44 z" fill="currentColor"/>
+  <!-- sparkle star -->
+  <path d="M68 34 l1.6 4.4 l4.4 1.6 l-4.4 1.6 l-1.6 4.4 l-1.6 -4.4 l-4.4 -1.6 l4.4 -1.6 z" fill="currentColor"/>
+  <!-- small dot -->
+  <circle cx="35" cy="64" r="1.4" fill="currentColor"/>
+</svg>

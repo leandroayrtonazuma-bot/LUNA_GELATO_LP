@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LUNA GELATO｜表参道のプレミアムジェラート専門店</title>
+  <meta name="description" content="イタリア伝統製法 × 日本の厳選素材。東京・表参道発のプレミアムジェラート専門店 LUNA GELATO。日常を少しだけ特別にする、ひとさじの贅沢を。">
+  <meta property="og:title" content="LUNA GELATO｜表参道のプレミアムジェラート">
+  <meta property="og:description" content="贅沢な味を、あなたに。イタリア伝統製法 × 日本の厳選素材。">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Shippori+Mincho+B1:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a class="brand" href="#hero" aria-label="LUNA GELATO ホーム">
+        <span class="brand__wordmark">LUNA GELATO</span>
+      </a>
+
+      <nav class="nav" aria-label="メインナビゲーション">
+        <ul class="nav__list">
+          <li><a href="#story">About</a></li>
+          <li><a href="#menu">Flavors</a></li>
+          <li><a href="#craft">Craftmanship</a></li>
+          <li><a href="#experience">Cafe</a></li>
+          <li><a href="#voice">Journal</a></li>
+          <li><a href="#access">Access</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn btn--primary header__store" data-reserve>
+        <span>Online Store</span>
+        <svg class="header__store-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <path d="M6 8h12l-1 11H7L6 8z" stroke-linejoin="round"/>
+          <path d="M9 8V6a3 3 0 0 1 6 0v2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <button class="burger" id="burger" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- mobile drawer -->
+  <div class="drawer" id="drawer">
+    <a href="#story" data-close>Story</a>
+    <a href="#craft" data-close>Craft</a>
+    <a href="#menu" data-close>Menu</a>
+    <a href="#experience" data-close>Experience</a>
+    <a href="#access" data-close>Visit</a>
+    <button class="btn btn--primary" data-reserve data-close>来店予約 / Reserve</button>
+  </div>
+
+  <main>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__photo">
+        <img src="images/hero.jpg" alt="バニラとピスタチオのジェラート" fetchpriority="high">
+      </div>
+      <div class="hero__shade" aria-hidden="true"></div>
+
+      <span class="hero__side" aria-hidden="true">Premium Flavor for Your Special Day</span>
+
+      <div class="hero__inner">
+        <div class="hero__emblem" data-hero="1" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none">
+            <path d="M58 28 a24 24 0 1 0 0 44 a18.5 18.5 0 1 1 0 -44 z" fill="currentColor"/>
+            <path d="M70 30 l1.8 5.2 l5.2 1.8 l-5.2 1.8 l-1.8 5.2 l-1.8 -5.2 l-5.2 -1.8 l5.2 -1.8 z" fill="currentColor"/>
+          </svg>
+        </div>
+        <h1 class="hero__logo" data-hero="2">LUNA</h1>
+        <p class="hero__logo-sub" data-hero="2">Gelato</p>
+        <p class="hero__tagline" data-hero="3">贅沢な味を、あなたに。</p>
+        <p class="hero__sub" data-hero="4">ひとくちで、特別な一日になる。</p>
+        <div class="hero__actions" data-hero="5">
+          <button class="btn btn--primary hero__cta" data-reserve>
+            <span>今すぐ味わう</span>
+            <span class="hero__cta-arrow" aria-hidden="true">&rarr;</span>
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===== Story ===== -->
+    <section class="story section-pad" id="story">
+      <div class="container">
+        <div class="story__grid">
+          <div class="story__media ph reveal" data-label="Story — artisan / ingredients"><img src="images/hand.jpg" alt="ジェラートを手づくりする職人" loading="lazy"></div>
+          <div class="story__text">
+            <span class="eyebrow reveal">Our Story</span>
+            <h2 class="section-title story__title reveal">月のしずくのような、<br>ひとさじを。<span class="en">A spoonful of the moon</span></h2>
+            <div class="story__body reveal">
+              <p>LUNA GELATOは、日常を少しだけ特別にするために生まれました。イタリアで磨かれた伝統製法に、日本各地の厳選素材を重ねて。</p>
+              <p>毎日、店内で手づくり。保存料に頼らず、その日の分を、その日に。なめらかな口どけと、素材そのものの香りを大切にしています。</p>
+              <p>忙しい一日の合間に、ひとさじの余白を。それが、わたしたちの願いです。</p>
+              <p class="story__sign">— LUNA GELATO</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Craft ===== -->
+    <section class="craft section-pad" id="craft">
+      <div class="container">
+        <div class="craft__head">
+          <span class="eyebrow reveal">Why LUNA</span>
+          <h2 class="section-title reveal">美味しさの理由<span class="en">Crafted with care</span></h2>
+          <p class="craft__lead reveal">素材、製法、そして手間。妥協のない3つのこだわりが、ひとさじの特別をつくります。</p>
+        </div>
+        <div class="craft__grid">
+          <div class="craft__item reveal" data-delay="0">
+            <div class="craft__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
+                <path d="M24 6c6 6 9 11 9 17a9 9 0 1 1-18 0c0-6 3-11 9-17z"/>
+                <path d="M19 26c2 2 8 2 10 0" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="craft__num">01</span>
+            <h3 class="craft__name">厳選素材</h3>
+            <span class="craft__name-en">Finest Ingredients</span>
+            <p class="craft__text">ピスタチオ、抹茶、苺。産地まで吟味した素材だけを使い、季節のいちばんを届けます。</p>
+          </div>
+          <div class="craft__item reveal" data-delay="120">
+            <div class="craft__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
+                <circle cx="24" cy="24" r="16"/>
+                <path d="M24 12v12l8 5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="craft__num">02</span>
+            <h3 class="craft__name">イタリア伝統製法</h3>
+            <span class="craft__name-en">Italian Craft</span>
+            <p class="craft__text">本場で受け継がれた製法で、空気を含ませすぎない濃密でなめらかな口どけに。</p>
+          </div>
+          <div class="craft__item reveal" data-delay="240">
+            <div class="craft__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
+                <path d="M14 20a10 10 0 0 1 20 0c0 6-4 8-4 14H18c0-6-4-8-4-14z"/>
+                <path d="M18 38h12" stroke-linecap="round"/>
+                <path d="M24 6v3M11 12l2 2M37 12l-2 2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="craft__num">03</span>
+            <h3 class="craft__name">無添加・毎日手作り</h3>
+            <span class="craft__name-en">Handmade Daily</span>
+            <p class="craft__text">保存料に頼らず、その日の分を、その日に。安心して楽しめる味わいをお約束します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Menu ===== -->
+    <section class="menu section-pad" id="menu">
+      <div class="container">
+        <div class="menu__head">
+          <span class="eyebrow reveal">Seasonal Flavors</span>
+          <h2 class="section-title reveal">こだわりのフレーバー<span class="en">Signature gelato</span></h2>
+        </div>
+        <div class="menu__marquee reveal" id="menuMarquee">
+          <div class="menu__track" id="menuTrack">
+
+            <article class="flavor">
+              <div class="flavor__media">
+                <span class="flavor__badge">No.1</span>
+                <div class="ph f-pistachio" data-label="Pistachio"><img src="images/flavor-pistachio.jpg" alt="ピスタチオのジェラート" loading="lazy"></div>
+              </div>
+              <div class="flavor__row">
+                <div><h3 class="flavor__name">ピスタチオ<span class="flavor__name-en">Pistachio</span></h3></div>
+                <span class="flavor__price">¥780</span>
+              </div>
+              <p class="flavor__desc">シチリア産の濃厚な香りと、奥深いコク。</p>
+            </article>
+
+            <article class="flavor">
+              <div class="flavor__media"><div class="ph f-milk" data-label="Premium Milk"><img src="images/flavor-milk.jpg" alt="プレミアムミルクのジェラート" loading="lazy"></div></div>
+              <div class="flavor__row">
+                <div><h3 class="flavor__name">プレミアムミルク<span class="flavor__name-en">Premium Milk</span></h3></div>
+                <span class="flavor__price">¥680</span>
+              </div>
+              <p class="flavor__desc">素材の甘みだけで仕上げた、やさしい一杯。</p>
+            </article>
+
+            <article class="flavor">
+              <div class="flavor__media"><div class="ph f-strawberry" data-label="Strawberry"><img src="images/flavor-strawberry.jpg" alt="ストロベリーのジェラート" loading="lazy"></div></div>
+              <div class="flavor__row">
+                <div><h3 class="flavor__name">ストロベリー<span class="flavor__name-en">Strawberry</span></h3></div>
+                <span class="flavor__price">¥720</span>
+              </div>
+              <p class="flavor__desc">完熟苺の、みずみずしい甘酸っぱさ。</p>
+            </article>
+
+            <article class="flavor">
+              <div class="flavor__media"><div class="ph f-hazelnut" data-label="Hazelnut"><img src="images/flavor-hazelnut.jpg" alt="ヘーゼルナッツのジェラート" loading="lazy"></div></div>
+              <div class="flavor__row">
+                <div><h3 class="flavor__name">ヘーゼルナッツ<span class="flavor__name-en">Hazelnut</span></h3></div>
+                <span class="flavor__price">¥780</span>
+              </div>
+              <p class="flavor__desc">香ばしさと、長く続く余韻を。</p>
+            </article>
+
+            <!-- duplicate set for seamless looping -->
+            <article class="flavor" aria-hidden="true">
+              <div class="flavor__media">
+                <span class="flavor__badge">No.1</span>
+                <div class="ph f-pistachio" data-label="Pistachio"><img src="images/flavor-pistachio.jpg" alt="" loading="lazy"></div>
+              </div>
+              <div class="flavor__row">
+                <div><h3 class="flavor__name">ピスタチオ<span class="flavor__name-en">Pistachio</span></h3></div>
+                <span class="flavor__price">¥780</span>
+              </div>
+              <p class="flavor__desc">シチリア産の濃厚な香りと、奥深いコク。</p>
+            </article>
+
+            <article class="flavor" aria-hidden="true">
+              <div class="flavor__media"><div class="ph f-milk" data-label="Premium Milk"><img src="images/flavor-milk.jpg" alt="" loading="lazy"></div></div>
+              <div class="flavor__row">
+                <div><h3 class="flavor__name">プレミアムミルク<span class="flavor__name-en">Premium Milk</span></h3></div>
+                <span class="flavor__price">¥680</span>
+              </div>
+              <p class="flavor__desc">素材の甘みだけで仕上げた、やさしい一杯。</p>
+            </article>
+
+            <article class="flavor" aria-hidden="true">
+              <div class="flavor__media"><div class="ph f-strawberry" data-label="Strawberry"><img src="images/flavor-strawberry.jpg" alt="" loading="lazy"></div></div>
+              <div class="flavor__row">
+                <div><h3 class="flavor__name">ストロベリー<span class="flavor__name-en">Strawberry</span></h3></div>
+                <span class="flavor__price">¥720</span>
+              </div>
+              <p class="flavor__desc">完熟苺の、みずみずしい甘酸っぱさ。</p>
+            </article>
+
+            <article class="flavor" aria-hidden="true">
+              <div class="flavor__media"><div class="ph f-hazelnut" data-label="Hazelnut"><img src="images/flavor-hazelnut.jpg" alt="" loading="lazy"></div></div>
+              <div class="flavor__row">
+                <div><h3 class="flavor__name">ヘーゼルナッツ<span class="flavor__name-en">Hazelnut</span></h3></div>
+                <span class="flavor__price">¥780</span>
+              </div>
+              <p class="flavor__desc">香ばしさと、長く続く余韻を。</p>
+            </article>
+
+          </div>
+        </div>
+        <div class="menu__foot reveal">
+          <a class="text-link" href="#access">全メニューは店舗にて</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section class="experience section-pad" id="experience">
+      <div class="container">
+        <div class="experience__head">
+          <span class="eyebrow reveal">The Experience</span>
+          <h2 class="section-title reveal">光のあふれる、表参道の隠れ家。<span class="en">A sunlit retreat in Omotesando</span></h2>
+          <p class="experience__lead reveal">アイボリーの外壁、大きなガラス窓、テラス席。思わず写真に収めたくなる、特別な時間をどうぞ。</p>
+        </div>
+        <div class="experience__gallery reveal">
+          <div class="ph gallery-thumb g1" data-label="Store exterior"><img src="images/store.jpg" alt="LUNA GELATO 表参道の店舗外観" loading="lazy"></div>
+          <div class="ph gallery-thumb g2" data-label="Guest"><img src="images/woman.jpg" alt="テラスでジェラートを楽しむ様子" loading="lazy"></div>
+          <div class="ph gallery-thumb g3" data-label="Craft"><img src="images/hand.jpg" alt="手づくりのジェラート" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Voice ===== -->
+    <section class="voice section-pad" id="voice">
+      <div class="container">
+        <div class="voice__head">
+          <span class="eyebrow reveal">Voices</span>
+          <h2 class="section-title reveal">お客様の声<span class="en">What guests say</span></h2>
+        </div>
+        <div class="voice__grid">
+          <figure class="quote reveal" data-delay="0">
+            <div class="quote__stars" aria-label="5つ星">★★★★★</div>
+            <blockquote class="quote__text">「ピスタチオが、今まで食べた中でいちばん。香りが本当に贅沢でした。」</blockquote>
+            <figcaption class="quote__author">A.M. — 20代女性</figcaption>
+          </figure>
+          <figure class="quote reveal" data-delay="120">
+            <div class="quote__stars" aria-label="5つ星">★★★★★</div>
+            <blockquote class="quote__text">「店内が素敵で、つい長居してしまいました。写真もたくさん撮れて大満足。」</blockquote>
+            <figcaption class="quote__author">Y.K. — 20代女性</figcaption>
+          </figure>
+          <figure class="quote reveal" data-delay="240">
+            <div class="quote__stars" aria-label="5つ星">★★★★★</div>
+            <blockquote class="quote__text">「ギフトに贈ったら大好評。上品なパッケージも気に入っています。」</blockquote>
+            <figcaption class="quote__author">M.S. — 30代女性</figcaption>
+          </figure>
+        </div>
+
+        <div class="proof reveal">
+          <div class="proof__item"><div class="proof__num">4.8</div><div class="proof__label">Google Rating</div></div>
+          <div class="proof__item"><div class="proof__num">2025</div><div class="proof__label">Best Gelato Award</div></div>
+          <div class="proof__item"><div class="proof__num">120k</div><div class="proof__label">Instagram Followers</div></div>
+        </div>
+
+        <div class="voice__cta reveal">
+          <button class="btn btn--primary" data-reserve>来店予約 / Reserve</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Instagram ===== -->
+    <section class="insta section-pad" id="instagram">
+      <div class="container">
+        <div class="insta__head">
+          <span class="eyebrow reveal">Follow Us</span>
+          <h2 class="insta__tag reveal">#LUNAGELATO</h2>
+          <p class="experience__lead reveal" style="margin-inline:auto;">あなたのひとさじも、ぜひ。タグをつけてシェアしてください。</p>
+        </div>
+        <div class="insta__grid insta-tints reveal">
+          <div class="ph insta__cell"><img src="images/flavor-pistachio.jpg" alt="" loading="lazy"></div>
+          <div class="ph insta__cell"><img src="images/woman.jpg" alt="" loading="lazy"></div>
+          <div class="ph insta__cell"><img src="images/flavor-strawberry.jpg" alt="" loading="lazy"></div>
+          <div class="ph insta__cell"><img src="images/store.jpg" alt="" loading="lazy"></div>
+          <div class="ph insta__cell"><img src="images/flavor-milk.jpg" alt="" loading="lazy"></div>
+          <div class="ph insta__cell"><img src="images/hand.jpg" alt="" loading="lazy"></div>
+          <div class="ph insta__cell"><img src="images/flavor-hazelnut.jpg" alt="" loading="lazy"></div>
+          <div class="ph insta__cell"><img src="images/hero.jpg" alt="" loading="lazy"></div>
+        </div>
+        <div class="insta__foot reveal">
+          <a class="btn btn--ghost" href="#" data-noop>@luna_gelato をフォロー</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Access ===== -->
+    <section class="access section-pad" id="access">
+      <div class="container">
+        <div class="access__grid">
+          <iframe class="access__map reveal" title="日本地図"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=128.0,30.5,146.5,46.0&layer=mapnik&marker=35.6657,139.7124"
+            loading="lazy"></iframe>
+          <div class="access__info">
+            <span class="eyebrow reveal">Visit Us</span>
+            <h2 class="section-title access__title reveal">店舗情報<span class="en">Store information</span></h2>
+            <div class="access__list reveal">
+              <div class="access__row"><span class="access__key">Address</span><span class="access__val">東京都渋谷区神宮前5-X-X<br>LUNA Building 1F</span></div>
+              <div class="access__row"><span class="access__key">Hours</span><span class="access__val">11:00 – 20:00（不定休）</span></div>
+              <div class="access__row"><span class="access__key">Access</span><span class="access__val">表参道駅 A2出口より徒歩5分</span></div>
+              <div class="access__row"><span class="access__key">Tel</span><span class="access__val">03-XXXX-XXXX</span></div>
+            </div>
+            <div class="access__actions reveal">
+              <button class="btn btn--primary" data-reserve>来店予約 / Reserve</button>
+              <a class="btn btn--ghost" href="#" data-noop>ギフト・オンライン購入</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Closing CTA ===== -->
+    <section class="cta section-pad" id="cta">
+      <div class="container">
+        <div class="cta__inner">
+          <h2 class="cta__title reveal">表参道で、<br>あなたのひとさじを。</h2>
+          <p class="cta__sub reveal">Make your day a little special.</p>
+          <div class="cta__btn reveal">
+            <button class="btn btn--primary" data-reserve>来店予約 / Reserve a Table</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <div class="footer__brandcol">
+        <a class="brand" href="#hero">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 100 100" fill="none">
+              <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M58 28 a24 24 0 1 0 0 44 a18.5 18.5 0 1 1 0 -44 z" fill="currentColor"/>
+              <path d="M68 33 l1.6 4.6 l4.6 1.6 l-4.6 1.6 l-1.6 4.6 l-1.6 -4.6 l-4.6 -1.6 l4.6 -1.6 z" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="brand__text"><span class="brand__name">LUNA</span><span class="brand__sub">Gelato</span></span>
+        </a>
+        <p class="footer__about">日常を少しだけ特別にするための、プレミアムジェラートブランド。東京・表参道発。</p>
+        <div class="footer__social">
+          <a href="#" data-noop aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" data-noop aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.2 1.8 3.9 4 4.2v3c-1.5 0-2.9-.5-4-1.2v6.3A5.8 5.8 0 1 1 10.2 9.7v3.1a2.8 2.8 0 1 0 2 2.7V3h3.8z"/></svg>
+          </a>
+          <a href="#" data-noop aria-label="X">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 4h2.6l-5.7 6.5L21 20h-5.3l-4.1-5.4L6.8 20H4.2l6.1-7L4 4h5.4l3.7 4.9L17.5 4zm-1 14.4h1.4L8.6 5.5H7.1l9.4 12.9z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="#story">Story</a></li>
+          <li><a href="#craft">Craft</a></li>
+          <li><a href="#menu">Flavors</a></li>
+          <li><a href="#experience">Experience</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="#access">Access</a></li>
+          <li><button class="footer-linkbtn" data-reserve style="font:inherit;letter-spacing:inherit;color:inherit;">Reservation</button></li>
+          <li><a href="#" data-noop>Online Store</a></li>
+          <li><a href="#" data-noop>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 LUNA GELATO. All rights reserved.</span>
+      <span>Omotesando, Tokyo</span>
+    </div>
+  </footer>
+
+  <!-- ===== Sticky mobile CTA ===== -->
+  <div class="sticky-cta" id="stickyCta">
+    <button class="btn btn--primary" data-reserve>来店予約 / Reserve</button>
+    <a class="sticky-cta__ig" href="#" data-noop aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+    </a>
+  </div>
+
+  <!-- ===== Reservation modal ===== -->
+  <div class="modal" id="reserveModal" role="dialog" aria-modal="true" aria-labelledby="reserveTitle" aria-hidden="true">
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__box">
+      <button class="modal__close" data-close-modal aria-label="閉じる">&times;</button>
+      <span class="eyebrow modal__eyebrow">Reservation</span>
+      <h2 class="modal__title" id="reserveTitle">来店予約<span class="en">Reserve a table</span></h2>
+
+      <form id="reserveForm" novalidate>
+        <div class="form-field">
+          <label for="r-name">お名前 / Name</label>
+          <input type="text" id="r-name" name="name" placeholder="山田 花子" required>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="r-date">来店日 / Date</label>
+            <input type="date" id="r-date" name="date" required>
+          </div>
+          <div class="form-field">
+            <label for="r-people">人数 / Guests</label>
+            <select id="r-people" name="people">
+              <option>1名</option><option>2名</option><option>3名</option><option>4名</option><option>5名以上</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="r-mail">メール / Email</label>
+          <input type="email" id="r-mail" name="email" placeholder="hello@example.com">
+        </div>
+        <button type="submit" class="btn btn--primary">予約を送信 / Send</button>
+        <p class="modal__note">＊ デモサイトです。入力内容はどこにも送信・保存されません。</p>
+      </form>
+
+      <div class="form-result" id="formResult">
+        <strong>これは架空の店のため、どこにも送信されません。</strong><br>
+        This is a fictional shop — your reservation is not sent anywhere.
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=2"></script>
+</body>
+</html>
