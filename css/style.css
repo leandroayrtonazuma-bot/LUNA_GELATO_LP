@@ -802,7 +802,8 @@ body.menu-open .drawer { opacity: 1; visibility: visible; }
 
   .story__grid,
   .access__grid { grid-template-columns: 1fr; }
-  .story__media { aspect-ratio: 4 / 3; order: -1; }
+  .story__media { aspect-ratio: 1 / 1; order: -1; }
+  .story__media img { object-position: 85% center; }
   .craft__grid,
   .voice__grid { grid-template-columns: 1fr; }
   .flavor { width: clamp(160px, 52vw, 210px); }
