@@ -158,17 +158,67 @@
     });
   }
 
-  /* ---------- 8. Menu marquee: pause while held / long-pressed ---------- */
+  /* ---------- 8. Menu marquee: auto-scroll (left->right) + drag to move ---------- */
   var marquee = document.getElementById('menuMarquee');
   var track = document.getElementById('menuTrack');
-  if (marquee && track) {
-    var pause = function () { track.classList.add('is-paused'); };
-    var resume = function () { track.classList.remove('is-paused'); };
-    marquee.addEventListener('pointerdown', pause);
-    window.addEventListener('pointerup', resume);
-    marquee.addEventListener('pointercancel', resume);
-    marquee.addEventListener('pointerleave', resume);
-    /* avoid the browser turning a long-press drag into text selection */
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (marquee && track && !reduceMotion) {
+    /* JS で駆動するため CSS アニメーションを止める */
+    track.style.animation = 'none';
+    track.style.willChange = 'transform';
+
+    var half = track.scrollWidth / 2;             /* 1セット分の幅（同じ内容が2セット並んでいる） */
+    var SPEED = half / 60;                          /* px/秒。従来の 60s 相当の速さを維持 */
+    var offset = 0;                                 /* 現在の translateX(px) */
+    var lastTs = null;
+    var dragging = false;
+    var startX = 0, startOffset = 0;
+
+    var measure = function () { half = track.scrollWidth / 2; SPEED = half / 60; };
+    window.addEventListener('resize', measure);
+
+    /* offset を (-half, 0] に正規化（2セット同一なので継ぎ目なくループ） */
+    var normalize = function (x) {
+      if (!half) return x;
+      x = x % half;
+      if (x > 0) x -= half;
+      return x;
+    };
+    var apply = function () { track.style.transform = 'translateX(' + offset + 'px)'; };
+
+    var frame = function (ts) {
+      if (lastTs === null) lastTs = ts;
+      var dt = (ts - lastTs) / 1000;
+      lastTs = ts;
+      if (!dragging) {
+        offset = normalize(offset + SPEED * dt);   /* += で右方向（左->右）へ */
+        apply();
+      }
+      requestAnimationFrame(frame);
+    };
+    requestAnimationFrame(frame);
+
+    marquee.addEventListener('pointerdown', function (e) {
+      dragging = true;
+      startX = e.clientX;
+      startOffset = offset;
+      marquee.classList.add('is-grabbing');
+      if (marquee.setPointerCapture) { try { marquee.setPointerCapture(e.pointerId); } catch (err) {} }
+    });
+    marquee.addEventListener('pointermove', function (e) {
+      if (!dragging) return;
+      offset = normalize(startOffset + (e.clientX - startX));
+      apply();
+    });
+    var endDrag = function () {
+      if (!dragging) return;
+      dragging = false;
+      lastTs = null;                                /* 自動復帰を滑らかに */
+      marquee.classList.remove('is-grabbing');
+    };
+    window.addEventListener('pointerup', endDrag);
+    marquee.addEventListener('pointercancel', endDrag);
+    /* 長押しドラッグでのテキスト選択・画像ドラッグを抑制 */
     marquee.addEventListener('dragstart', function (e) { e.preventDefault(); });
   }
 
