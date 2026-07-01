@@ -805,7 +805,11 @@ body.menu-open .drawer { opacity: 1; visibility: visible; }
   .story__media { aspect-ratio: 4 / 3; order: -1; }
   .craft__grid,
   .voice__grid { grid-template-columns: 1fr; }
-  .flavor { width: clamp(220px, 72vw, 280px); }
+  .flavor { width: clamp(160px, 52vw, 210px); }
+  .flavor__media { margin-bottom: .8rem; }
+  .flavor__name { font-size: 18px; }
+  .flavor__name-en { font-size: 13px; }
+  .flavor__desc { font-size: 12.5px; }
   .experience__gallery { grid-template-columns: 1fr 1fr; aspect-ratio: 4 / 3; }
   .experience__gallery .g1 { grid-row: span 1; grid-column: span 2; }
   .footer__inner { grid-template-columns: 1fr; }
